@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- <record id="lerm_civil_srf_form_inherited" model="ir.ui.view">
+        <field name="name">lerm.civil.srf.form.inherited</field>
+        <field name="model">lerm.civil.srf</field>
+        <field name="arch" type="xml">
+        </field>
+    </record> -->
+</odoo>
