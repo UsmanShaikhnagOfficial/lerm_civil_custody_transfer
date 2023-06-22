@@ -6,8 +6,8 @@ class Srf(models.Model):
 
     state = fields.Selection([
         ('1-draft', 'Draft'),
-        ('2-onsite', 'OnSite'),
-        ('3-transit', 'In Transit'),
-        ('4-received', 'Received at Lab'),
-        ('5-confirm', 'Confirmed')
+        ('2-confirm', 'Confirmed'),
+        ('3-onsite', 'OnSite'),
+        ('4-transit', 'In Transit'),
+        ('5-received', 'Received at Lab')
     ], string='State', default='1-draft')
