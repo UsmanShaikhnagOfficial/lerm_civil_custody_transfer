@@ -1,10 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-    <!-- <record id="lerm_civil_srf_form_inherited" model="ir.ui.view">
-        <field name="name">lerm.civil.srf.form.inherited</field>
+    <record id="lerm_civil_srf_form_inherited" model="ir.ui.view">
+        <field name="name">lerm.civil.srf.form</field>
         <field name="model">lerm.civil.srf</field>
+        <field name="inherit_id" ref="lerm_civil.lerm_civil_srf_form" />
         <field name="arch" type="xml">
+
+                    <xpath expr="//field[@name='contact_site_ids']" position="after">
+                        <group>
+                            <field name='sample_picture' filename="sample_picture_name"/>
+                            <field name="sample_picture_name" invisible="1"/>
+                        </group>
+                    </xpath>
+                    
+                    <xpath expr="//field[@name='sample_range_table']" position="after">
+                    <notebook>
+                        <page string="Attachment">
+                            <field name='attachment_table'>
+                            <tree editable='bottom'>
+                                <field name="attachment" widget="binary" filename="attachment_name"/>
+                                <field name='attachment_name' invisible="1"/>
+                            </tree>
+                            </field>
+                        </page>
+
+                        <page string="Courier">
+                        <group>
+                            <group>
+                                <field name='courier_name'/>
+                                <field name='courier_vehicle_no'/>
+                            </group>
+                            <group>
+                                <field name='courier_contact_no'/>
+                                <field name='courier_description'/>
+                            </group>
+                        </group>
+                        </page>
+                        <page string="Location">
+                            <group>
+                                <field name='latitude'/>
+                                <field name='longitute'/>
+                            </group>
+                        </page>
+                    </notebook>
+                    </xpath>
+                   
         </field>
-    </record> -->
+    </record>
 </odoo>
